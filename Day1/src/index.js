@@ -10,7 +10,7 @@ const redisClient = require('./config/redis');
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-
+app.get('/', (req, res) => res.send('Hello from Render + MongoDB'));
 // Routes
 app.use('/api/v1/user', userAuthRoutes);
 // Connect to MongoDB
